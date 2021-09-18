@@ -1,14 +1,15 @@
+//
 
-type JsonPrimitive = string | number | boolean | null;
+type PrimitiveType = string | number | boolean | null;
 
-type JsonStructure = JsonObject | JsonArray;
+type StructureType = ObjectType | ArrayType;
 
-type JsonType = JsonPrimitive | JsonStructure;
+type JsonType = PrimitiveType | StructureType;
 
-interface JsonObject extends Record<string, JsonType> {
+interface ObjectType extends Record<string, JsonType> {
 }
 
-interface JsonArray extends Array<JsonType> {
+interface ArrayType extends Array<JsonType> {
 }
 
 export {

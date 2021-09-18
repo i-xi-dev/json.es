@@ -12,17 +12,18 @@
     }
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "lint": "eslint --ext ts --fix ./src/",
+    "test": "mocha test/node/ --recursive",
+    "prepublish": "npm run clean && npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/i-xi-dev/json.es.git"
   },
   "keywords": [
-    "jsonpatch",
-    "jsonpath",
     "jsonpointer",
-
     "browser",
     "deno",
     "nodejs"
